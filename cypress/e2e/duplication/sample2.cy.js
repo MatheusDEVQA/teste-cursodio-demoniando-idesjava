@@ -17,12 +17,12 @@ describe('Code duplication bad practice - repetitive tests', () => {
 
   const termsSearchFor = ['reactjs', 'vuejs']
 
-  termsSearchFor.forEach( term =>{
+  termsSearchFor.forEach(term => {
     it(`searches for "${term}"`, () => {
       cy.search(`${term}`)
-  
+
       cy.wait('@getStories')
-  
+
       cy.get('.table-row')
         .should('have.length', 100)
     })
