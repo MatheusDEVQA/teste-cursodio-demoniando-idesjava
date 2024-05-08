@@ -7,6 +7,5 @@ describe('Browser testing bad practice - anchor with target _blank', () => {
     cy.contains('a', 'Política de Privacidade')
       .should('have.attr', 'href', 'privacy.html')
       .and('have.attr', 'target', '_blank')
-
   })
 })
